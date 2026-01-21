@@ -1,0 +1,41 @@
+"hello": ["नमस्ते", "bonjour", "hola", "hallo", "வணக்கம்"],
+    "thank you": ["धन्यवाद", "merci", "gracias", "danke", "நன்றி"],
+    "water": ["पानी", "eau", "agua", "wasser", "தண்ணீர்"],
+    "food": ["खाना", "nourriture", "comida", "essen", "உணவு"],
+    "house": ["घर", "maison", "casa", "haus", "வீடு"],
+    "book": ["किताब", "livre", "libro", "buch", "புத்தகம்"],
+    "school": ["विद्यालय", "école", "escuela", "schule", "பள்ளி"],
+    "teacher": ["शिक्षक", "professeur", "maestro", "lehrer", "ஆசிரியர்"],
+    "student": ["छात्र", "étudiant", "estudiante", "student", "மாணவன்"],
+    "friend": ["दोस्त", "ami", "amigo", "freund", "நண்பன்"],
+    "family": ["परिवार", "famille", "familia", "familie", "குடும்பம்"],
+    "city": ["शहर", "ville", "ciudad", "stadt", "நகரம்"],
+    "country": ["देश", "pays", "país", "land", "நாடு"],
+    "love": ["प्यार", "amour", "amor", "liebe", "காதல்"],
+    "happy": ["खुश", "heureux", "feliz", "glücklich", "மகிழ்ச்சி"],
+    "sad": ["उदास", "triste", "triste", "traurig", "வருத்தம்"],
+    "morning": ["सुबह", "matin", "mañana", "morgen", "காலை"],
+    "night": ["रात", "nuit", "noche", "nacht", "இரவு"],
+    "yes": ["हाँ", "oui", "sí", "ja", "ஆம்"],
+    "no": ["नहीं", "non", "no", "nein", "இல்லை"]
+}
+
+languages = ["Hindi", "French", "Spanish", "German", "Tamil"]
+
+while True:
+    print("\n1.Hindi  2.French  3.Spanish  4.German  5.Tamil  6.Exit")
+    choice = int(input("Enter your choice: "))
+
+    if choice == 6:
+        print("Exiting program...")
+        break
+
+    if 1 <= choice <= 5:
+        word = input("Enter an English word: ").lower()
+        if word in translations:
+            print("Translation in", languages[choice-1], ":",
+                  translations[word][choice-1])
+        else:
+            print("Word not found.")
+    else:
+        print("Invalid option.")
